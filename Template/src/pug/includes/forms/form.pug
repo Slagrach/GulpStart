@@ -1,0 +1,63 @@
+.section-shadow#advanced
+	h2
+		a.example-link(href='#advanced') More fields, custom rules
+	section.base-example.container
+		form.form#form.pb-3(action='#', autocomplete='off')
+			.form-group.mb-3
+				label.form-label(for='name') Enter your name
+				input.form__input.form-control#name(type='text', data-validate-field='pass', placeholder='Enter your name', autocomplete='off', name='name')
+			.form-group.mb-3
+				label.form-label(for='email') Enter your email
+				input.form__input.form-control#email(type='email', placeholder='Enter your email', autocomplete='off', name='email')
+			.form-group.mb-3
+				label.form-label(for='password') Enter your password
+				input.form__input.form-control#password(type='password', data-validate-field='pass', placeholder='Enter your password', autocomplete='off', name='password')
+			.form-group.mb-3
+				label.form-label(for='phone') Enter your phone
+				input.form__input.form-control._tel#phone(type='tel', data-validate-field='tel', placeholder='Enter your phone', autocomplete='off', name='phone')
+			.form-group.mb-3
+				label.form-label(for='select') Select you favorite animal
+				select#select.form-select(name='select')
+					option(value) --Please choose an option--
+					option(value='dog') Dog
+					option(value='cat') Cat
+					option(value='hamster') Hamster
+					option(value='parrot') Parrot
+					option(value='spider') Spider
+					option(value='goldfish') Goldfish
+			.form-group.mb-3
+				label.form-label(for='text') Enter your message
+				textarea.form__textarea.form-control#text(name='message', cols='30', rows='10')
+			.form-group.mb-3
+				.form-check
+					label.form-check-label(for='example2_consent_checkbox') I agree to provide the information
+					input#example2_consent_checkbox.form-check-input(type='checkbox')
+			.form-group#example2_read_terms_checkbox_group.mb-3
+				.form-check
+					label.form-check-label(for='example2_read_terms_checkbox_group_1') I have read Privacy Policy
+					input#example2_read_terms_checkbox_group_1.form-check-input(type='checkbox', name='checkbox-group-fruit')
+				.form-check
+					label.form-check-label(for='example2_read_terms_checkbox_group_2') I have read Terms Of Use
+					input#example2_read_terms_checkbox_group_2.form-check-input(type='checkbox', name='checkbox-group-fruit')
+				.form-check
+					label.form-check-label(for='example2_read_terms_checkbox_group_3') I have read Cookies Policy
+					input#example2_read_terms_checkbox_group_3.form-check-input(type='checkbox', name='checkbox-group-fruit')
+			.form-group.mb-3
+				.pb-1 Please select the preferred way for communication
+				.form-check#example2_communication_radio_group
+					input.form-check-input#example2_communication_radio_group_1(type='radio', name='radio')
+					label.form-check-label(for='example2_communication_radio_group_1') Email
+					br
+					input.form-check-input#example2_communication_radio_group_2(type='radio', name='radio')
+					label.form-check-label(for='example2_communication_radio_group_2') SMS
+			.form-group.mb-3
+				.col
+					label.form-label(for='formImage') Upload several png/jpg/jpeg files with min size 10kb and max size 25kb
+					input.form__input.form-control#formImage(type='file', name='files[]', multiple)
+					ul#output-file-info.output-file-info__list
+					span.output-file-info__total-size#total-size
+					ul#output-image.output-image__list
+			.file__preview#formPreview
+			.d-grid.justify-content-start
+				button.btn.btn-primary#form_submit-btn(type='submit') Submit
+				button.btn.btn-primary#form_submit-btn-reset(type='reset') Reset

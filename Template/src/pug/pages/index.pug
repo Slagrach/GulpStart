@@ -1,0 +1,22 @@
+extends ../layout/main
+
+block variables
+	- var title = 'Главная';
+	- var pageClass = 'page';
+	- var wrapperClass = '';
+
+block append head
+	include ../static/head
+
+block header
+	include ../static/header/header
+
+block footer
+	include ../static/footer/footer
+
+block append content
+	include ../components/test/test
+
+block classes
+	//include ../includes/classes/classes
+

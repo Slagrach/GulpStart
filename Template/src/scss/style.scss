@@ -1,0 +1,49 @@
+@use 'sass:math';
+@import 'vars';
+@import 'mixins';
+@import 'reset';
+@import 'fonts';
+@import 'icons';
+
+body {
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	background: linear-gradient(45deg, #0a0a0a, #3a4452);
+	padding: 10rem 0;
+}
+
+.page {
+	flex: 1 1 auto;
+}
+
+:root {
+	--max-width: 100%;
+	--padding: 2rem;
+}
+
+[class*='__container'] {
+	width: min(100% - var(--padding), var(--max-width));
+	margin-inline: auto;
+}
+
+[data-type='section'] {
+	--max-width: 100rem;
+	width: min(100% - var(--padding), var(--max-width));
+	margin-inline: auto;
+
+	[class*='__container'] {
+		--max-width: 80rem;
+		--padding: 2rem;
+	}
+}
+
+@import 'commons';

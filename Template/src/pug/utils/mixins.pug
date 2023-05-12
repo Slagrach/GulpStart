@@ -1,0 +1,117 @@
+mixin burger(...names)
+	.header__menu.menu
+		+button('button')(class="menu__icon icon-menu")
+		nav.menu__body
+			ul.menu__list
+				each name in names
+					li.menu__item
+						+link('#', name)(class="menu__link")
+mixin link(href, names)
+	a(class!=attributes.class href=href)= names
+mixin button(type, name)
+	button(class!=attributes.class type=type)
+		span
+		span
+		span
+
+
+
+
+
+mixin menu(menuSelected)
+	div.menu
+		ul.menu__list
+			each menuItem in menuList
+				+menu_item(menuItem, menuSelected)
+mixin menu_item(menuItem, menuSelected)
+	li.menu__item(class = menuSelected === menuItem.title ? "active" : "")
+		a.menu__link(href = menuItem.link)= menuItem.title
+		if menuItem.subnav.length > 0
+			ul.submenu
+				each submenuItem in menuItem.subnav
+					li.submenu__item
+						a.submenu__link(href=submenuItem.link)=submenuItem.title
+-
+	var menuList = [
+		{
+			title: "Home",
+			link: "#",
+			showFooter: true,
+			subnav: [
+				{
+					title: "Main",
+					link: "#",
+				},
+				{
+					title: "picture",
+					link: "#",
+				}
+			]
+		}, {
+			title: "Menu item 2",
+			link: "areas.html",
+			showFooter: true,
+			subnav: [
+				{
+					title: "Submenu item 1",
+					link: "#",
+				},
+				{
+					title: "Submenu item 2",
+					link: "#",
+				},
+			]
+		}, {
+			title: "Menu item 3",
+			link: "#",
+			showFooter: true,
+			subnav: [
+				{
+					title: "Submenu item 1",
+					link: "#",
+				},
+				{
+					title: "Submenu item  2",
+					link: "#",
+				},
+			]
+		}
+	];
+
+
+
+mixin list_1(data)
+	ul
+		each item in data.items
+			li= item.title
+			if item.sublevel
+				+list(item)
+
+- var data = {"title": "Title text", "items": [{"title": "Item 1"}, {"title": "Item 2", "sublevel": true, "items": [{"title": "Item 2.1"}, {"title": "Item 2.2"}, {"title": "Item 2.2", "sublevel": true, "items": [{"title": "Item 2.2.1", "sublevel": true, "items": [{"title": "Item 2.2.2.1"}, {"title": "Item 2.2.2.2"}, {"title": "Item 2.2.2.3"} ] }, {"title": "Item 2.2.2"}, {"title": "Item 2.2.3"} ] } ] }, {"title": "Item 3"} ] }
+
+
+
+
+
+mixin icon(name, mod)
+	if(mod)
+		svg(class="svg-sprite-icon icon-" + name + ' ' + mod)
+			use(xlink:href="images/icons/icons.svg#" + name)
+	else
+		svg(class="svg-sprite-icon icon-" + name)
+			use(xlink:href="images/icons/icons.svg#" + name)
+
+
+
+mixin list_2(cl,cl_2, ...items)
+	ul(class=cl)
+		each item in items
+			li(class=cl_2)= item
+
+mixin icon(name, clc)
+	- mod = mod || ''
+	- clc = clc || ''
+	svg(class="icon icon-" + name + ' ' + clc)
+		use(xlink:href='images/icons/arrow-down.svg')
+
+

@@ -1,0 +1,86 @@
+// Минимальная ширина страницы
+$minWidth:               320;
+// Ширина полотна (макета)
+$maxWidth:               1920;
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer:      1366;
+// Общий отступ у контейнера
+// (30 = по 15px слева и справа, 0 = нет отступа)
+$containerPadding:       20;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth:         $maxWidthContainer + $containerPadding;
+:root {
+	--containerWidth:    1366;
+}
+
+// Брейк-поинты
+$pc:                     em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet:                 em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile:                 em(767.98); // Телефоны L
+$mobileSmall:            em(479.98); // Телефоны S
+
+// Тип адаптива:
+// 1 = отзывчивость (у контейнера нет брейкпоинтов),
+// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
+$responsiveType:         1;
+// Шрифт по умолчанию
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:  SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$fontFamily:             'Poppins', $font-family-sans-serif, $font-family-monospace;
+$fontSize:               rem(); // где 14(px) - размер шрифта по умолчанию из макета
+:root {
+	--minFont:           .75; // где число - размер шрифта min в rem
+	--maxFont:           1;   // где число - размер шрифта max в rem
+}
+// Основные цвета
+$mainColor:              rgba(114, 86, 59, 1); // Цвет шрифта по умолчанию
+
+$bgHeader:               ('color': $mainColor);
+
+$variables:              (
+		                         'Colors': (
+				                         'color': (
+						                         'primary': #000,
+						                         'success': #27BA6C,
+						                         'info': #03a9f4,
+						                         'warning': #FF8833,
+						                         'danger': #ff1a1a,
+						                         'brown': #A4744C
+				                         )
+		                         ),
+		                         'Background': (
+				                         'color': (
+						                         'black': #000000,
+						                         'white': #FFFFFF,
+						                         'black-rgba': rgba(0, 0, 0, .55),
+						                         'white-rgba': rgba(255, 255, 255, .55)
+				                         )
+		                         ),
+		                         'Indents': (
+				                         'size': (
+						                         'top': 20px,
+						                         'right': 20px,
+						                         'bottom': 20px,
+						                         'left': 20px,
+				                         )
+		                         )
+                         );
+
+//padding-top: map_get($variables, 'Indents', 'size', 'top');
+
+
+$status-colors:          (
+		                         primary: #000,
+		                         success: #27BA6C,
+		                         info: #03a9f4,
+		                         warning: #FF8833,
+		                         danger: #ff1a1a
+                         );
+
+//@each $status, $color in $status-colors {
+//
+//	&--#{$status} {
+//		background: $color;
+//	}
+//}

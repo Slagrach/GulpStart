@@ -1,0 +1,23 @@
+.block
+	.img__title Hello
+	.block__items
+		.block__item
+			img(src='images/1.jpg' alt='' loading='lazy')
+			img.svg-sprite-icon(src='images/icons/sprite.svg#check' alt='check' loading='lazy')
+		.block__item
+			img(src='images/2.jpeg' alt='' loading='lazy')
+		.block__item
+			img(src='images/3.jpg' alt='' loading='lazy')
+		.block__item
+			img(src='images/4.jpg' alt='' loading='lazy')
+
+	+icon('close', 'block__close')
+	+icon('p-left', 'block__close')
+	+icon('tag', 'block__close')
+	+icon('check', 'block__close')
+
+	+button('button', 'btn')
+	+link('hOme', 'home')
+	+burger('home', 'Home')
+
+	+list('list', 'odin', 2, 3)

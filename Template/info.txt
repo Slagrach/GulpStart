@@ -1,0 +1,2 @@
+npm i webp-converter@2.2.3 -D
+npm i gulp-imagemin@7.1.0 -D

@@ -1,0 +1,55 @@
+dialog.modal
+	.modal__line-top
+	.modal__content
+		button.modal__close._close(type='button')
+			svg#cross(version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewbox='0 0 490 490' style='enable-background:new 0 0 490 490;' xml:space='preserve')
+				polygon(points='456.851,0 245,212.564 33.149,0 0.708,32.337 212.669,245.004 0.708,457.678 33.149,490 245,277.443 456.851,490 489.292,457.678 277.331,245.004 489.292,32.337 ')
+		.modal__scroll
+			.modal__top
+				.modal__line
+			.modal__body
+				.modal__header
+					h2.modal__title Пишите звоните!
+					span.modal__subtitle &Vcy;&ocy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&jcy;&tcy;&iecy;&scy;&softcy; &ucy;&dcy;&ocy;&bcy;&ncy;&ycy;&mcy; &dcy;&lcy;&yacy; &vcy;&acy;&scy; &scy;&pcy;&ocy;&scy;&ocy;&bcy;&ocy;&mcy; &scy;&vcy;&yacy;&zcy;&icy;
+				.modal__inner
+					.modal__left
+						form#form-two.modal__form.form(action='#' method='POST')
+							// Hidden Required Fields
+							input(type='hidden', name='project_name', value='slagrach.ru')
+							input(type='hidden', name='admin_email', value='zloi.slagrach@yandex.ru')
+							input(type='hidden', name='form_subject', value='modal form')
+							// END Hidden Required Fields
+							.form__item
+								label(for='name-two')
+								input#name-two.form__name(type='text', name='name-two', required='')
+								span.form__label имя
+								span.form__line
+							.form__item
+								label(for='mail-two')
+								input#mail-two.form__email(type='text', name='email-two', required='')
+								span.form__label почта
+								span.form__line
+							.form__item
+								label(for='phone-two')
+								input#phone-two.form__phone(type='text', name='phone-two', required='')
+								span.form__label телефон
+								span.form__line
+							.form__item.form__item_lust
+								label(for='text-two')
+								textarea#text-two.form__text(name='text-two', required='')
+								span.form__label сообщение
+								span.form__line
+							.form__buttons
+								button.form__btn.form__btn_clean(type='reset')
+								button.form__btn.form__btn_send(type='submit')
+					.modal__right
+						.modal__items
+							.modal__item(style='--clr: #2196f3')
+								i.modal__icon._icon-email
+								a.modal__email(href='mailto:slagrach@gmail.com') slagrach@gmail.com
+							.modal__item(style='--clr: #2196f3')
+								i.modal__icon._icon-phone
+								a.modal__phone(href='tel:79776165046') +7(977)616-50-46
+							.modal__item(style='--clr: #2196f3')
+								i.modal__icon._icon-telegram
+								a.modal__telegram(href='tg://resolve?domain=slagrach') slagrach

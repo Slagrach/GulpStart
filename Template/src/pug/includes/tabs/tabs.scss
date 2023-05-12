@@ -1,0 +1,57 @@
+.tabs {
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		width: 50px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #f4f4f4;
+		background: grey;
+		padding: 10px 0;
+		transition: color .4s ease 0s;
+		&._active {
+			font-weight: bold;
+			color: #27BA6C;
+		}
+	}
+
+	&__body {
+	}
+
+	&__block {
+		display: none;
+		&._active {
+			display: block;
+		}
+	}
+
+	&__title {
+		font-size: 26px;
+
+	}
+}
+ul.tab__list {
+	list-style: inside;
+
+}
+.tab__item {
+	counter-increment: my-counter;
+	&::marker {
+		//content: '😜';
+		content: '🌠';
+	}
+}
+.tab__link {
+	&:before {
+		content: counter(my-counter) '. ';
+	}
+}

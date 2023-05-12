@@ -1,0 +1,24 @@
+include ../utils/mixins
+block variables
+	- var title = 'Главная';
+	- var description = '';
+	- var keywords = '';
+	- var pageClass = '';
+	- var wrapperClass = '';
+
+doctype html
+html(lang='ru')
+	head
+		block head
+		title #{title}
+	body
+		.wrapper(class=wrapperClass)
+			include ../components/animate/animate
+			block header
+			main(class=pageClass)
+				block content
+			block footer
+			block classes
+		block popup
+		block script
+			script(src='js/index.js')

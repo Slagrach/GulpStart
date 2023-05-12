@@ -1,0 +1,14 @@
+.classes {
+	display:         flex;
+	justify-content: center;
+
+	&__list {
+		border-radius: 20px;
+		background:    #7a956b;
+		padding:       20px;
+
+		li {
+			padding: 5px;
+		}
+	}
+}

@@ -1,0 +1,124 @@
+/*You can use the following solution using the percentage function:*/
+//@for $i from 0 to 15 {
+//	.parent .child:nth-child(#{$i}) {
+//		//this should randomize by percent up to 100% (20%, 45%, 77%, ...)
+//		left: percentage(random(100) / 100);
+//		//this should randomize opacity (0.5, 0.7, 0.9, ...)
+//		opacity: random(10) / 10;
+//	}
+//}
+/*You can also use the original answer without the percentage function:*/
+//@for $i from 0 to 15 {
+//	.parent .child:nth-child(#{$i}) {
+//		//this should randomize by percent up to 100% (20%, 45%, 77%, ...)
+//		left: random(100) / 100 * 100%;
+//		//this should randomize opacity (0.5, 0.7, 0.9, ...)
+//		opacity: random(10) / 10;
+//	}
+//}
+
+//@mixin color-divs($count, $baseName, $startcolor) {
+//	@for $i from 1 through $count {
+//		$background-color: darken($startcolor, $i * $i);
+//		.leaves__sheet-#{$i} {
+//			background: $background-color;
+//			//height:100px;
+//			//width:200px;
+//			//float: left;
+//			//margin-right: 5px;
+//		}
+//	}
+//}
+//@include color-divs(10, 'a', #0b76ef);
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-block-start: 5rem;
+}
+
+@for $i from 1 through 11 {
+	.leaves__sheet-#{$i} {
+		//content: "$i == #{$i}";
+		// multiply by 10 for larger hue increments
+		background: hsl($i * 10, 50%, 50%);
+	}
+}
+
+@for $j from 1 through 10 {
+	.leaves__item:nth-child(#{$j}) {
+		//left: percentage(random(100) / 100);
+		left: percentage(math.div(random(100), 100));
+		//left: percentage(calc(random(100) / 100));
+		animation: a random(20) + s linear infinite;
+	}
+}
+
+.leaves {
+	//--pageHeight: 0;
+	position: absolute;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	pointer-events: none;
+
+	&__list {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: var(--pageHeight);
+		list-style: inherit;
+		pointer-events: none;
+	}
+
+	&__item {
+		position: absolute;
+		display: block;
+
+		&::marker {
+			content: '🌠';
+		}
+	}
+
+	&__sheet {
+		display: block;
+		width: 10px;
+		height: 10px;
+		border-radius: 50px;
+	}
+}
+
+@keyframes a {
+	0% {
+		opacity: 0;
+		top: -10%;
+		transform: translateX(20px) rotate(0deg);
+	}
+	10% {
+		opacity: 1;
+	}
+	20% {
+		opacity: 1;
+		transform: translateX(-20px) rotate(0deg);
+	}
+	40% {
+		opacity: 1;
+		transform: translateX(-20px) rotate(90deg);
+	}
+	60% {
+		opacity: 1;
+		transform: translateX(20px) rotate(0deg);
+	}
+	80% {
+		opacity: 1;
+		transform: translateX(-20px) rotate(180deg);
+	}
+	100% {
+		top: 100%;
+		opacity: 1;
+		transform: translateX(-20px) rotate(225deg);
+	}
+}

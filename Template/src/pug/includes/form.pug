@@ -1,0 +1,40 @@
+form.form#form(action='#')
+	.form__content
+		.form__item
+			label.form__label(for='name')
+			input.form__input#name(type='text' data-required data-validate data-error="error" name='name' placeholder='You name...')
+			//small.form__error(aria-hidden='true') error
+		.form__item
+			label.form__label(for='email')
+			input.form__input#email(type='text' data-required="email" data-validate data-error="error" name='E-mail' placeholder='You E-mail...')
+			//small.form__error(aria-hidden='true') error
+		.form__item
+			label.form__label(for='phone')
+			input.form__input#phone(type='text' data-required data-validate data-error="error" name='phone' placeholder='You phone...')
+			//small.form__error(aria-hidden='true') error
+		.form__item
+			label.form__label(for='pass')
+			input.form__input#pass(type='text' data-required data-validate data-error="error" name='password' placeholder='You password...')
+			//small.form__error(aria-hidden='true') error
+		.form__item
+			label.form__label(for='text')
+			textarea.form__textarea#text(name='text' placeholder='You message...')
+		.form__item
+			.form__item-radio.radio
+				.radio__item
+					label.radio__label(for='male') Male
+					input.radio__input#male(type='radio', data-required, data-validate, name='gender', value='male')
+				.radio__item
+					label.radio__label(for='female') Female
+					input.radio__input#female(type='radio', data-required, data-validate, name='gender', value='female')
+		.form__item
+			.form__item-check.check
+				.check__item
+					label.check__label(for='example1') Example#1
+					input.check__input#example1(type='checkbox', name='example1', value='example1')
+				.check__item
+					label.check__label(for='example2') Example#2
+					input.check__input#example2(type='checkbox', name='example2', value='example2')
+		.form__buttons
+			button.form__button.form__button_send._btn(type='submit') Send
+			button.form__button.form__button_reset._btn(type='reset') Reset

@@ -1,0 +1,77 @@
+-
+	$zebra = 1;
+
+section.test._classes
+	.test__container
+		.test__content
+			h1.test__title Tabs
+			include ../../includes/tabs/tabs
+			ul.test__list
+				li.test__item
+					a.test__link.link-one(href='#one')
+						svg(width='800px' height='800px' viewbox='0 0 24 24')
+							path(d='M11 18.75C10.9015 18.7505 10.8038 18.7313 10.7128 18.6935C10.6218 18.6557 10.5393 18.6001 10.47 18.53L4.47001 12.53C4.32956 12.3894 4.25067 12.1988 4.25067 12C4.25067 11.8013 4.32956 11.6107 4.47001 11.47L10.47 5.47003C10.6122 5.33755 10.8002 5.26543 10.9945 5.26885C11.1888 5.27228 11.3742 5.35099 11.5116 5.48841C11.649 5.62582 11.7278 5.81121 11.7312 6.00551C11.7346 6.19981 11.6625 6.38785 11.53 6.53003L6.06001 12L11.53 17.47C11.6705 17.6107 11.7494 17.8013 11.7494 18C11.7494 18.1988 11.6705 18.3894 11.53 18.53C11.4608 18.6001 11.3782 18.6557 11.2872 18.6935C11.1962 18.7313 11.0986 18.7505 11 18.75Z' fill='#000000')
+							path(d='M19 12.75H5C4.80109 12.75 4.61032 12.671 4.46967 12.5303C4.32902 12.3897 4.25 12.1989 4.25 12C4.25 11.8011 4.32902 11.6103 4.46967 11.4697C4.61032 11.329 4.80109 11.25 5 11.25H19C19.1989 11.25 19.3897 11.329 19.5303 11.4697C19.671 11.6103 19.75 11.8011 19.75 12C19.75 12.1989 19.671 12.3897 19.5303 12.5303C19.3897 12.671 19.1989 12.75 19 12.75Z' fill='#000000')
+				li.test__item
+					a.test__link.link-two(href='#two')
+						img(src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPg0KPHN2ZyB3aWR0aD0iODAwcHgiIGhlaWdodD0iODAwcHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxwYXRoIGQ9Ik0xMSAxOC43NUMxMC45MDE1IDE4Ljc1MDUgMTAuODAzOCAxOC43MzEzIDEwLjcxMjggMTguNjkzNUMxMC42MjE4IDE4LjY1NTcgMTAuNTM5MyAxOC42MDAxIDEwLjQ3IDE4LjUzTDQuNDcwMDEgMTIuNTNDNC4zMjk1NiAxMi4zODk0IDQuMjUwNjcgMTIuMTk4OCA0LjI1MDY3IDEyQzQuMjUwNjcgMTEuODAxMyA0LjMyOTU2IDExLjYxMDcgNC40NzAwMSAxMS40N0wxMC40NyA1LjQ3MDAzQzEwLjYxMjIgNS4zMzc1NSAxMC44MDAyIDUuMjY1NDMgMTAuOTk0NSA1LjI2ODg1QzExLjE4ODggNS4yNzIyOCAxMS4zNzQyIDUuMzUwOTkgMTEuNTExNiA1LjQ4ODQxQzExLjY0OSA1LjYyNTgyIDExLjcyNzggNS44MTEyMSAxMS43MzEyIDYuMDA1NTFDMTEuNzM0NiA2LjE5OTgxIDExLjY2MjUgNi4zODc4NSAxMS41MyA2LjUzMDAzTDYuMDYwMDEgMTJMMTEuNTMgMTcuNDdDMTEuNjcwNSAxNy42MTA3IDExLjc0OTQgMTcuODAxMyAxMS43NDk0IDE4QzExLjc0OTQgMTguMTk4OCAxMS42NzA1IDE4LjM4OTQgMTEuNTMgMTguNTNDMTEuNDYwOCAxOC42MDAxIDExLjM3ODIgMTguNjU1NyAxMS4yODcyIDE4LjY5MzVDMTEuMTk2MiAxOC43MzEzIDExLjA5ODYgMTguNzUwNSAxMSAxOC43NVoiIGZpbGw9IiMwMDAwMDAiLz4NCjxwYXRoIGQ9Ik0xOSAxMi43NUg1QzQuODAxMDkgMTIuNzUgNC42MTAzMiAxMi42NzEgNC40Njk2NyAxMi41MzAzQzQuMzI5MDIgMTIuMzg5NyA0LjI1IDEyLjE5ODkgNC4yNSAxMkM0LjI1IDExLjgwMTEgNC4zMjkwMiAxMS42MTAzIDQuNDY5NjcgMTEuNDY5N0M0LjYxMDMyIDExLjMyOSA0LjgwMTA5IDExLjI1IDUgMTEuMjVIMTlDMTkuMTk4OSAxMS4yNSAxOS4zODk3IDExLjMyOSAxOS41MzAzIDExLjQ2OTdDMTkuNjcxIDExLjYxMDMgMTkuNzUgMTEuODAxMSAxOS43NSAxMkMxOS43NSAxMi4xOTg5IDE5LjY3MSAxMi4zODk3IDE5LjUzMDMgMTIuNTMwM0MxOS4zODk3IDEyLjY3MSAxOS4xOTg5IDEyLjc1IDE5IDEyLjc1WiIgZmlsbD0iIzAwMDAwMCIvPg0KPC9zdmc+' alt='' loading='lazy')
+				li.test__item
+					a.test__link.link-three(href='#three')
+				li.test__item
+					a.test__link(href='#four')
+				li.test__item
+					a.test__link(href='#five')
+				li.test__item
+					a.test__link(href='#six')
+			section.one#one(data-type='section')
+				.section__container
+					.section__content
+			section.two#two(data-type='section')
+				.section__container
+					.section__content
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam consectetur doloremque esse et explicabo impedit maxime nesciunt nulla, obcaecati perferendis porro, sint soluta voluptatum. Aliquam amet consequuntur mollitia quod velit.
+						p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eos explicabo placeat unde? Dolorum ipsum modi obcaecati tempore voluptas.
+							blockquote Ad consectetur ducimus ea natus necessitatibus praesentium temporibus voluptas voluptatem voluptatibus.
+			section.three#three(data-type='section')
+				.section__container
+					.section__content
+			section.four#four(data-type='section')
+				.section__container
+					.section__content
+						.calculator#calculator(data-type='calculator')
+							input.calculator__input#calcInput(type='text', placeholder='0')
+							.calculator__item
+								button.calculator__btn(type='button') AC
+								button.calculator__btn(type='button') DEL
+								button.calculator__btn(type='button') %
+								button.calculator__btn(type='button') /
+							.calculator__item
+								button.calculator__btn(type='button') 7
+								button.calculator__btn(type='button') 8
+								button.calculator__btn(type='button') 9
+								button.calculator__btn(type='button') *
+							.calculator__item
+								button.calculator__btn(type='button') 4
+								button.calculator__btn(type='button') 5
+								button.calculator__btn(type='button') 6
+								button.calculator__btn(type='button') -
+							.calculator__item
+								button.calculator__btn(type='button') 1
+								button.calculator__btn(type='button') 2
+								button.calculator__btn(type='button') 3
+								button.calculator__btn(type='button') +
+							.calculator__item
+								button.calculator__btn(type='button') 00
+								button.calculator__btn(type='button') 0
+								button.calculator__btn(type='button') .
+								button.calculator__btn(type='button') =
+			section.five#five(data-type='section')
+				.section__container
+					.section__content
+						.zebra
+							ul.zebra__list(style='width: 100%')
+								while $zebra < 11
+									li(class=`zebra__item zebra__item-${$zebra++}` style='width: 100%; padding: 15px;')
+			section.six#six(data-type='section')
+				.section__container
+					.section__content
